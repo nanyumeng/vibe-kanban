@@ -35,6 +35,8 @@ The wrapper scripts live one directory above this repository in the `codingtodo`
 ../scripts/stop-vibe-kanban.sh
 ```
 
+Implementation note: on macOS, the prebuilt binary exits immediately in a detached no-TTY background process. The wrapper starts it through `script` so it gets a pseudo-terminal.
+
 ## Source Development
 
 Install the Rust toolchain before running the source development server:
@@ -53,4 +55,3 @@ Vibe Kanban is licensed under Apache License 2.0. Commercial use, modification, 
 ## Operational Caveat
 
 The original company behind Vibe Kanban announced shutdown on 2026-04-10. Treat this fork as a self-maintained codebase and avoid depending on upstream hosted services.
-
