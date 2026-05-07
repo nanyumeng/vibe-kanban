@@ -35,7 +35,7 @@ The wrapper scripts live one directory above this repository in the `codingtodo`
 ../scripts/stop-vibe-kanban.sh
 ```
 
-Implementation note: on macOS, the prebuilt binary exits immediately in a detached no-TTY background process, and plain background jobs can receive SIGHUP when the shell exits. The wrapper starts it through `nohup + script` so it gets a pseudo-terminal and survives the launcher shell.
+Implementation note: on macOS, the prebuilt binary exits immediately in a detached no-TTY background process, and plain background jobs can receive SIGHUP when the shell exits. The wrapper starts it through `nohup + script` so it gets a pseudo-terminal and survives the launcher shell, then records the actual server process listening on the configured port.
 
 ## Source Development
 
